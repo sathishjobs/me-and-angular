@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <% include header.html %>
+   </head>
+   <body>
+      <div class='container'>
+         <h2 class='text-center animated bounce'>Welcome &nbsp<strong><%= user.username %></strong></h2>
+         <div class='form-box'>
+         <h3>Your info</h3>
+         <table class='table'>
+               <tr>
+                  <th>Name</th><th>Email</th><th>Action</th>
+               </tr>
+               <tr>
+                  <th><%= user.username %></th>
+                  <th><%=user.email%></th>
+                  <th>
+                     <a href="/delete/<%=user.userId%>" class='btn btn-info'>Delete</a>&nbsp|&nbsp
+                     <a href="/signout" class='btn btn-info' title="sign out">sign out</a>
+
+
+                  </th>
+               </tr>
+         </table>
+         </div>
+
+      </div>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+[
+  {
+   
+    "image_path": [],
+    "social_link": [
+      {
+        "link_type": "Linkedin",
+        "link_path": "https://www.linkedin.com"
+        
+      },
+      {
+        "link_type": "Facebook",
+        "link_path": "https://www.facebook.com/"
+        
+      },
+      {
+        "link_type": "Twitter",
+        "link_path": "https://www.twitter.com"
+        
+      }
+    ],
+    "faq": [
+      {
+        "type": "CAN THE AVERAGE JOE BE A TENANT?",
+        "title": " No, this is a VIP place, and the one fundamental requirement is to be passionate about the startup environment. You must have “innovator” written all over you, be it as a founder, an early employee, a rockstar engineer, a community leader and so on.",
+        "position": "second"
+        
+      },
+      {
+        "type": "HOW LONG CAN I STAY IN THIS HEAVENLY PLACE?",
+        "title": "The minimum is 3 months, but as long as you are involved in the entrepreneurial environment and unless a volcano erupts or you kill someone, you can stay here for as long as you wish! Just make sure that you keep bringing value to the table.",
+        "position": "fourth"
+        
+      },
+      {
+        "type": "NO PROBLEM IF I BRING MY 5000 WATT SOUND SYSTEM?",
+        "title": "Although there are a bunch of very cool guys hanging together, NEST is not a party house. That means no raves and you can’t invite half of Paris as guests. But having some friends over on Fridays, please, by all means!",
+        "position": "six"
+        
+      },
+      {
+        "type": " DO I HAVE TO BRING MY TOOTHBRUSH?",
+        "title": "Yes you do, alongside all personal items. Rooms and common areas are already furnished with all the modern comfort suited to your liking (although no trampolines yet). Our dedicated administration team makes sure that everything stays neat and functional",
+        "position": "eight"
+        
+      },
+      {
+        "type": "CAN I START MY OWN NEST?",
+        "title": "Ab-so-lute-ly! We followed NEST Copenhagen’s movement and we would love to see the NEST phenomena spread. In that way people can travel more and even use the secret underground tunnel that links the NESTs of all countries and faith!",
+        "position": "nine"
+        
+      },
+      {
+        "type": "WHAT KIND OF BIRDS ARE IN THE NEST?",
+        "position": "first",
+        "title": "We only take people with an IQ over 151 and a bank account with a 10 digit credit line!<br>Kidding, we are not exclusive to any specific segment of society, though we certainly expect young, energetic and hungry individuals to take part in this social experiment."
+        
+      },
+      {
+        "type": "WILL THERE BE STUFF HAPPENING?",
+        "position": "third",
+        "title": "Hell yes! NEST Talks are organized as often as possible with both residents and friendly outsiders. The speakers will land on the stage and sweep the audience off their feet on a weekly basis. NEST Paris is set to overthrow TED & LeWeb in no time."
+        
+      },
+      {
+        "type": "CAN I BRING MY RELATIVES?",
+        "position": "five",
+        "title": "Sure, as long as they are only visiting or staying for a short time. We won’t call the Spanish Inquisition to enforce the rules and you can expect some flexibility, but your girlfriend, dogs, cats, parents or best friend cannot plant his tent in the living room."
+        
+      },
+      {
+        "type": "SO HOW THICK SHOULD MY WALLET BE?",
+        "position": "sevan",
+        "title": "The price for the rooms varies based on their size and stays within market range. The Parisian real estate market is a wild one, like any other capital, so we go with the flow. Expect somewhere between 700 to 1000 euros."
+        
+      }
+    ],
+    "what_is_next": [
+      {
+        "type": "second_part",
+        "content": "The adventure started with our Copenhagen friends at www.nestcopenhagen.dk, in April 2014 with a roaring success and now it is set on spreading as faaar as the eye can see. The Paris chapter will only be the second iteration of this concept. And since there will be more than one NEST on this blue ball we call Earth, you will have the opportunity to travel from one to another - think of this as couchsurfing for entrepreneurs, where you get to mingle with premium tenants."
+        
+      },
+      {
+        "type": "first_part",
+        "content": "NEST Paris is the home version of an incubator, a shared accommodation where a bunch of entrepreneurs gather up with the purpose of living, learning, sharing and possibly creating stuff alongside like-minded people. Basically natural and effortless networking for breakfast, lunch and dinner. This is co-living place as opposed to a co-working space and you don’t have to bring your business cards to the kitchen! "
+        
+      },
+      {
+        "type": "third_part",
+        "content": "Tech, arts, entertainment, hula-hooping and debates are welcome (even in the morning when people are cranky). Opportunities will naturally present themselves when interacting with roommates that may end up as business partners or simple drinking buddies. Ultimately, people join to keep firing up the brain cells responsible for evolving as a superior human species...or just to make life more interesting."
+        
+      }
+    ],
+    "menu_part": []
+  }
+]

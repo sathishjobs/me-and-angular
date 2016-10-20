@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   	<% include header.html %>
+   </head>
+   <body>
+    <div class='container'>
+      <div class='form-box'>
+          <h2 class='text-center animated bounce'>This is admin area</h2>
+          <a href="/signout" class='btn btn-info pull-right' title="sign out">sign out</a>
+          <h3>Total users found: <span class='badge'><%= user.length %></span></h3>
+          <table class='table table-bordered'>
+            <tr>
+              <th>User Id</th>
+              <th>User name</th>
+              <th>User email</th>
+            </tr>
+            
+            <% user.forEach(function(msgObj){ %>
+            <tr>
+              <td><%= msgObj.userId %></td>
+              <td><%= msgObj.username %></td>
+              <td><%= msgObj.email %></td>
+            </tr>
+            <% }) %>
+          </table>
+      </div>
+
+    </div>     
+   </body>
+</html>

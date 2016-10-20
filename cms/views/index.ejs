@@ -1,0 +1,508 @@
+<!doctype html>
+<html class="no-skrollr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>NEST Paris</title>
+    <meta name="description" content="Nest Paris">
+    <meta name="author" content="Iron Mikkel and the rest of the WD Avengers team">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="images/favicon.ico" rel="icon" type="image/png" >
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+    <link href="/stylesheets/styles.css" rel="stylesheet" />
+    <link href="/stylesheets/angular-toastr.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Gentium+Basic' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-animate.js"></script>
+
+</head>
+
+<body ng-app="nestParis" ng-controller="mainController">
+    
+    <!-- Section #1 -->
+    <% Data.forEach( function(content){ %>
+                         
+
+    <section id="headerImg" data-top-top="background-position:50% 0px;" data-top-bottom="background-position:50% -50px;">
+        <div class="container">
+                       
+            <div id="headerContent" class="text-center" data-anchor-target="#headerImg" data--50-top-top="top:15%;opacity:1;" data-top-bottom="top:95%;opacity:0;">
+                <img src="images/np_logo.png" id="headerLogo" alt="Nest Logo">
+                <h1 id="headerTitle">NEST Paris</h1>
+                <p id="headerText">They say entrepreneurs are like ducks, all calm and peaceful on the surface but paddling and working hard under the water.
+                    <br>We're giving them a Nest and a family to swim with in the
+                    <del>love</del> tech capital of the world.</p>
+                    
+
+            </div>
+        </div>
+    </section>
+    <!-- Navigation -->
+    <nav class="navbar-white" role="navigation" id="nav" data-0="position:relative;" data-1-top="box-shadow: 0 0px 0 rgba(200, 200, 200, 0.7);" data-top-top="position:fixed;top:0;box-shadow: 0 4px 0 rgba(200, 200, 200, 0.7);" data-edge-strategy="set">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div id="socialMedia">
+            <% var facebook_path='#'%>
+            <% var twitter_path='#'%>
+            <% var linkedin_path='#'%>
+            <% content.social_link.forEach(function(social_link_data){%>
+            <%if(social_link_data.link_type=='Facebook'){ facebook_path=social_link_data.link_path}%>
+            <%if(social_link_data.link_type=='Twitter'){ twitter_path=social_link_data.link_path}%>
+            <%if(social_link_data.link_type=='Linkedin'){ linkedin_path=social_link_data.link_path}%>
+            
+            <%})%>
+           
+            <a href="<%=facebook_path%>" class="Facebook" target="_blank">
+                <svg class="navIcon" viewBox="0 0 128 128" preserveAspectRatio="xMidYMid meet" id="facebookIcon">
+                    <g fill="#C4C4C4" stroke="none">
+                        <path d="M 48.6 9.6 c -17.6 4.2 -33.3 18.9 -39.7 37 c -3 8.2 -3.7 22.8 -1.5 31.4 c 2.8 11.1 7.2 18.7 15.5 27.1 c 12.5 12.5 26.2 17.7 43.9 16.7 c 23 -1.4 42.4 -16.2 50.3 -38.4 c 3 -8.3 3.7 -23.7 1.4 -32.4 c -5.3 -20.3 -21.9 -36.8 -41.6 -41.5 c -7.9 -1.8 -20.5 -1.8 -28.3 0.1 Z m 29.4 29.4 c 0 4.6 -0.2 5 -2.4 5 c -1.4 0 -3.6 0.4 -5 1 c -2.2 0.8 -2.6 1.6 -2.6 5 l 0 4 l 4.6 0 l 4.5 0 l -0.3 5.2 l -0.3 5.3 l -4.2 0.3 l -4.3 0.3 l 0 15.5 l 0 15.4 l -6.5 0 l -6.5 0 l 0 -15.5 l 0 -15.5 l -3 0 c -3 0 -3 -0.1 -3 -5.5 c 0 -5.4 0 -5.5 3 -5.5 c 2.9 0 3 -0.1 3 -4.9 c 0 -11.2 4 -15.1 15.8 -15.1 l 7.2 0 l 0 5 Z" />
+                    </g>
+                </svg>
+            </a>
+            <a href="<%=twitter_path%>" class='Twitter' target="_blank">
+                <svg class="navIcon" viewBox="0 0 128 128" preserveAspectRatio="xMidYMid meet" id="twitterIcon">
+                    <g fill="#C4C4C4" stroke="none">
+                        <path d="M 50.6 9.6 c -19.3 4.7 -35.9 21.4 -41.1 41.4 c -2.3 8.8 -1.7 24.2 1.3 32.4 c 8.1 22.3 27.5 37 50.4 38.4 c 17.7 1 31.4 -4.2 43.9 -16.7 c 12.4 -12.4 17.5 -25.7 16.7 -43.1 c -0.8 -15.3 -6 -26.9 -17.1 -38 c -13.4 -13.4 -34.7 -19.1 -54.1 -14.4 Z m 31.8 34 c 2.7 1.3 4 1.4 6.5 0.6 c 3.3 -1.2 4.1 -0.3 1.6 1.8 c -2.2 1.8 -1.8 3.2 0.7 2.4 c 2.1 -0.6 2.1 -0.6 -0.3 2.4 c -1.7 2 -2.8 4.7 -3.2 8.1 c -1.3 10.9 -9.2 21.9 -19 26.2 c -7.1 3.1 -19.2 3.2 -25.7 0.2 l -4.5 -2 l 4 -0.7 c 2.2 -0.4 5.7 -1.5 7.8 -2.4 l 3.9 -1.6 l -3.6 -1.8 c -1.9 -1 -4.2 -2.8 -5.1 -4 c -1.5 -2.2 -1.4 -2.3 0.6 -2.8 c 2.1 -0.5 2.1 -0.6 -0.4 -1.9 c -2.4 -1.3 -5.7 -6.5 -5.7 -8.9 c 0 -0.6 0.9 -0.8 2 -0.5 c 1.9 0.5 1.9 0.4 -0.2 -3.4 c -1.6 -2.9 -1.9 -4.7 -1.4 -7.6 l 0.7 -3.7 l 5.4 4.5 c 4.8 3.9 13.1 7.5 17.2 7.5 c 0.8 0 1.3 -1.1 1.3 -2.8 c 0 -1.5 0.9 -4 1.9 -5.6 c 3.7 -5.6 9.2 -7 15.5 -4 Z" />
+                    </g>
+                </svg>
+            </a>
+            <a href="<%=linkedin_path%>" class='Linkedin' target="_blank">
+                <svg class="navIcon" viewBox="0 0 128 128" preserveAspectRatio="xMidYMid meet" id="linkedinIcon">
+                    <g fill="#C4C4C4" stroke="none">
+                        <path d="M 50.6 9.6 c -19.3 4.7 -35.9 21.4 -41.1 41.4 c -2.3 8.8 -1.7 24.2 1.3 32.4 c 8.1 22.3 27.5 37 50.4 38.4 c 17.7 1 31.4 -4.2 43.9 -16.7 c 12.4 -12.4 17.5 -25.7 16.7 -43.1 c -0.8 -15.3 -6 -26.9 -17.1 -38 c -13.4 -13.4 -34.7 -19.1 -54.1 -14.4 Z m -0.9 27.1 c 4.2 5.6 -2.7 13.5 -8.9 10.2 c -3.1 -1.6 -3.8 -2.8 -3.8 -6.6 c 0 -4.2 3.2 -6.6 8 -5.9 c 1.9 0.3 4.1 1.3 4.7 2.3 Z m 39.3 17.1 c 2.3 1.1 4.3 3.3 5.8 6.2 c 2 3.9 2.2 5.9 2.2 18.2 l 0 13.8 l -6.5 0 l -6.5 0 l 0 -12.5 c 0 -12 -0.1 -12.7 -2.5 -15 c -3 -3.1 -4.7 -3.1 -8.1 -0.1 c -2.7 2.3 -2.8 2.7 -3.2 15 l -0.4 12.6 l -5.9 0 l -5.9 0 l 0 -19.5 l 0 -19.5 l 6 0 c 5.3 0 6 0.2 6 2 c 0 2.5 0.2 2.5 4.6 -0.5 c 4.4 -3 9.4 -3.2 14.4 -0.7 Z m -39 18.7 l 0 19.5 l -6.5 0 l -6.5 0 l 0 -19.5 l 0 -19.5 l 6.5 0 l 6.5 0 l 0 19.5 Z" />
+                    </g>
+                </svg>
+            </a>
+            <br>
+
+        </div>
+        <div class="navbar-header">
+           
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul id="navLinks" class="nav navbar-nav">
+                <li>
+                    <a href="#intro">What is Nest?<%= title %></a>
+                </li>
+                <li>
+                   <a href="#faq">FAQ</a>
+                </li>
+                <li>
+                    <a href="#form">Apply</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--placeholder div to prevent jumpy content when nav gets pinned-->
+    <div style="padding:1em;" data-0="display:none;" data-top-top="display:block;" data-anchor-target="#nav" data-edge-strategy="set">&nbsp;</div>
+    <!--End Navigation -->
+    <div id="content">
+        <!-- Section #2 -->
+        <section id="intro">
+            <div class="container">
+                <div class="sectionContent">
+                 
+                    <h2 class="sectionHeader">&nbspWHAT IS NEST PARIS?<div class="borderBottom"></div></h2>
+
+            <% var first_part='#'%>
+            <% var second_part='#'%>
+            <% var third_part='#'%>
+            <% content.what_is_next.forEach(function(data){%>
+            <%if(data.type=='first_part'){ first_part=data.content}%>
+            <%if(data.type=='second_part'){ second_part=data.content}%>
+            <%if(data.type=='third_part'){ third_part=data.content}%>
+            <%})%>
+                   
+                    <p class='sectionText'>
+                    <%=first_part%>
+                    </p>
+                    <p class='sectionText'>
+                    <%=second_part%>
+                    </p>
+                    <p class='sectionText'>
+                    <%=third_part%>
+                    </p>
+                                     
+                   
+                </div>
+            </div>
+        </section>
+        <!-- Section #3 -->
+        <section id="faqImg" data-bottom-top="background-position:50% 0px;" data-top-bottom="background-position:50% 25px;">
+            <div class="container">
+                <div class="text-center">
+                    <h3 class="imgText imgTextLong">WINSTON CHURCHILL ADVISED OTHERS TO GO TO HEAVEN FOR THE CLIMATE AND TO HELL FOR THE COMPANY.<br>NEST IS HEAVEN WITH GOOD COMPANY.</h3>
+                </div>
+            </div>
+        </section>
+        <!-- Section #4 -->
+        <section id="faq">
+            <div class="container container-fullWidth">
+                <div class="sectionContent">
+
+            <% var faq1_title='#'%>
+            <% var faq1_answer='#'%>
+            <% var faq2_title='#'%>
+            <% var faq2_answer='#'%>
+            <% var faq3_title='#'%> 
+            <% var faq3_answer='#'%> 
+            <% var faq4_title='#'%> 
+            <% var faq4_answer='#'%> 
+            <% var faq5_title='#'%> 
+            <% var faq5_answer='#'%> 
+            <% var faq6_title='#'%> 
+            <% var faq6_answer='#'%> 
+            <% var faq7_title='#'%> 
+            <% var faq7_answer='#'%> 
+            <% var faq8_title='#'%> 
+            <% var faq8_answer='#'%> 
+            <% var faq9_title='#'%> 
+            <% var faq9_answer='#'%> 
+            
+
+            <% content.faq.forEach(function(data){%>
+            <%if(data.position=='first'){ faq1_title=data.type;faq1_answer=data.title}%>
+            <%if(data.position=='second'){ faq2_title=data.type;faq2_answer=data.title}%>
+            <%if(data.position=='third'){ faq3_title=data.type;faq3_answer=data.title}%>
+            <%if(data.position=='fourth'){ faq4_title=data.type;faq4_answer=data.title}%>
+            <%if(data.position=='five'){ faq5_title=data.type;faq5_answer=data.title}%>
+            <%if(data.position=='six'){ faq6_title=data.type;faq6_answer=data.title}%>
+            <%if(data.position=='sevan'){ faq7_title=data.type;faq7_answer=data.title}%>
+            <%if(data.position=='eight'){ faq8_title=data.type;faq8_answer=data.title}%>
+            <%if(data.position=='nine'){ faq9_title=data.type;faq9_answer=data.title}%>
+            <%})%>
+
+
+
+               
+
+                    <h2 class="sectionHeader">&nbspFAQ<div class="borderBottom"></div></h2>
+                    <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="accordionAnchor">
+                                <div class="circle">
+                                    <p class="plus" style="display: none;">+</p>
+                                    <p class="minus" style="display:block;">-</p>
+                                </div>
+                                <h4 class="faqQuestion">
+                             <%=faq1_title%>
+                          </h4>
+                            </a>
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <p class="faqAnswer">
+                                   <%=faq1_answer%>
+                                   </p>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="accordionAnchor">
+                                <div class="circle">
+                                    <p class="plus" style="display:block;">+</p>
+                                    <p class="minus" style="display: none;">-</p>
+                                </div>
+                                <h4 class="faqQuestion">
+                              <%=faq2_title%>
+                          </h4>
+                            </a>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <p class="faqAnswer">
+                                    <%=faq2_answer%>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="accordionAnchor">
+                                <div class="circle">
+                                    <p class="plus" style="display:block;">+</p>
+                                    <p class="minus" style="display: none;">-</p>
+                                </div>
+                                <h4 class="faqQuestion">
+                               <%=faq3_title%>
+                          </h4>
+                            </a>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <p class="faqAnswer">
+                                     <%=faq3_answer%>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="accordionAnchor">
+                                <div class="circle">
+                                    <p class="plus" style="display:block;">+</p>
+                                    <p class="minus" style="display: none;">-</p>
+                                </div>
+                                <h4 class="faqQuestion">
+                              <%=faq4_title%>
+                          </h4>
+                            </a>
+                            <div id="collapseFour" class="panel-collapse collapse">
+                                <p class="faqAnswer">
+                                    <%=faq4_answer%>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" class="accordionAnchor">
+                                <div class="circle">
+                                    <p class="plus" style="display:block;">+</p>
+                                    <p class="minus" style="display: none;">-</p>
+                                </div>
+                                <h4 class="faqQuestion">
+                               <%=faq5_title%>
+                          </h4>
+                            </a>
+                            <div id="collapseFive" class="panel-collapse collapse">
+                                <p class="faqAnswer">
+                                   <%=faq5_answer%>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix" class="accordionAnchor">
+                                <div class="circle">
+                                    <p class="plus" style="display:block;">+</p>
+                                    <p class="minus" style="display: none;">-</p>
+                                </div>
+                                <h4 class="faqQuestion">
+                              <%=faq6_title%>
+                          </h4>
+                            </a>
+                            <div id="collapseSix" class="panel-collapse collapse">
+                                <p class="faqAnswer">
+                                    <%=faq6_answer%>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight" class="accordionAnchor">
+                                <div class="circle">
+                                    <p class="plus" style="display:block;">+</p>
+                                    <p class="minus" style="display: none;">-</p>
+                                </div>
+                                <h4 class="faqQuestion">
+                               <%=faq7_title%>
+                          </h4>
+                            </a>
+                            <div id="collapseEight" class="panel-collapse collapse">
+                                <p class="faqAnswer">
+                                    <%=faq7_answer%>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine" class="accordionAnchor">
+                                <div class="circle">
+                                    <p class="plus" style="display:block;">+</p>
+                                    <p class="minus" style="display: none;">-</p>
+                                </div>
+                                <h4 class="faqQuestion">
+                               <%=faq8_title%>
+                          </h4>
+                            </a>
+                            <div id="collapseNine" class="panel-collapse collapse">
+                                <p class="faqAnswer">
+                                    <%=faq8_answer%>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" class="accordionAnchor">
+                                <div class="circle">
+                                    <p class="plus" style="display:block;">+</p>
+                                    <p class="minus" style="display: none;">-</p>
+                                </div>
+                                <h4 class="faqQuestion">
+                               <%=faq9_title%>
+                          </h4>
+                            </a>
+                            <div id="collapseSeven" class="panel-collapse collapse">
+                                <p class="faqAnswer">
+                                     <%=faq9_answer%>
+                                </p>
+                            </div>
+                        </div>    
+                    
+                    <div class="panel panel-default"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section #5 -->
+        <section id="formImg" data-bottom-top="background-position:50% 15px;" data-top-bottom="background-position:50% -35px;">
+            <div class="container">
+                <div class="text-center">
+                    <h3 class="imgText imgTextLong">PEOPLE SAY HOME IS WHERE THE HEART IS.<br>NESTERS CLAIM IT IS THE BRAIN.</h3>
+                </div>
+            </div>
+        </section>
+        <!-- Section #6 -->
+        <section id="form">
+            <div class="container">
+                <div class="sectionContent">
+                    <h2 class="sectionHeader">CONTACT FORM<div class="borderBottom"></div></h2>
+                    <div class="row" style="margin-bottom:50px">
+                        <button type="button" class="col-sm-offset-2 col-sm-3 col-xs-offset-2 col-xs-8 btn btn-lg myBtn blueBtnSelected" id="appButton">I want to live here</button>
+                        <button type="button" class="col-sm-offset-2 col-sm-3 col-xs-offset-2 col-xs-8 btn btn-lg myBtn" id="talkButton">I just want to talk</button>
+                    </div>
+                    <!-- I Want to Live Here Form -->
+                    <form name="liveForm" novalidate role="form" class="form-horizontal" id="appForm">
+                        <p class="sectionText">Before you can join this social experiment, we want to understand what you’re bringing to the table. We first look at your experience, especially related to entrepreneurship, and we put a high value on charisma and creativity as well. After we see your “paper”, you meet up with the residents. It’s a matter of getting the majority of them to give a thumbs up and welcome you in!</p>
+                        <div class="form-group">
+                            <div class="col-xs-12 col-sm-6 formPair">
+                                <label for="fullName">Full Name<span class="redAsterisk">*</span></label>
+                                <input type="text" ng-model="live.name" class="singleLineForm" id="fullName" required>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 formPair">
+                                <label for="appEmail">E-mail<span class="redAsterisk">*</span></label>
+                                <input type="email" ng-model="live.email" class="singleLineForm" id="appEmail" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12 col-sm-6 formPair">
+                                <label for="phone">Phone<span class="redAsterisk">*</span></label>
+                                <input type="tel" ng-model="live.phone" class="singleLineForm" id="phone" required>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 formPair">
+                                <label for="age">Age<span class="redAsterisk">*</span></label>
+                                <input type="number" ng-model="live.age" class="singleLineForm" id="age" required>
+                            </div>
+                        </div>
+                        <div class="form-group" style="position:relative">
+                            <div class="col-xs-12 col-sm-6 formPair">
+                                <label>Cover Letter</label>
+                                <textarea ng-model="live.coverLetter" class="myTextArea" rows="10"></textarea>
+                            </div>
+                            <!-- <div class="col-xs-12 col-sm-6 formPair" style="position:static">
+                            <label style="margin-bottom:10%">File Upload</label>
+                            <div id="fileInputs">
+                                <div class="col-xs-12 col-sm-6 col-lg-4 no-padding">
+                                <div class="custom_upload_button">
+                                    <span class="file-input btn btn-file">
+                                        <span class="upload_text">SELECT A FILE</span>
+                                        <input type="file" id="fileInput1">
+                                    </span>
+                                    <p class="selected_file"></p>
+                                </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-lg-4 no-padding">
+                                <div class="custom_upload_button">
+                                    <span class="file-input btn btn-file">
+                                        <span class="upload_text">SELECT A FILE</span>
+                                        <input type="file" id="fileInput2">
+                                    </span>
+                                    <p class="selected_file"></p>
+                                </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-lg-4 no-padding">
+                                <div class="custom_upload_button">
+                                    <span class="file-input btn btn-file">
+                                        <span class="upload_text">SELECT A FILE</span>
+                                        <input type="file" id="fileInput3">
+                                    </span>
+                                    <p class="selected_file"></p>
+                                </div>
+                                </div>
+                            </div>
+                          </div> -->
+                            <button type="button" class="btn btn-lg myBtn sendAppBtn" id="sendApplication" ng-click="liveSend()" ng-disabled="liveForm.$invalid">SEND APPLICATION</button>
+                        </div>
+                    </form>
+                    <!-- Just Want to Talk form -->
+                    <form name="talkForm" novalidate role="form" class="form-horizontal" id="talkForm" style="display:none">
+                        <p class="sectionText">This is the part where you flirt with us, err, I mean let us know what your thoughts are. Whether it is press inquiries, partnerships, general feedback or you just want to chat because you couldn’t find the needed info in our <a href="#faq">FAQ section</a>, just fill in the boxes below and we will get back to you as fast as we can.</p>
+                        <div class="form-group">
+                            <div class="col-xs-4 formPair">
+                                <label for="talkEmail">E-mail Address<span class="redAsterisk">*</span></label>
+                                <input type="email" ng-model="talk.email" class="singleLineForm" id="talkEmail" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label for="mailContents" class="sr-only">Suggestions</label>
+                                <textarea ng-model="talk.suggestions" class="myTextArea" rows="10" id="mailContents" placeholder="Leave a suggestion or a comment"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="col-xs-offset-9 col-xs-3 btn btn-lg myBtn sendBtn" id="sendTalk" ng-click="talkSend()" ng-disabled="talkForm.$invalid">SEND</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <!-- <section id="footer">
+            <p id="footerText">Designed with Love by <a href="http://wiredelta.com/" target="_blank"><span class="color-blue"><i>Wiredelta</i></span></a></p>
+        </section> -->
+        <div id="loginModal" style="display:none;">
+            <img src="images/cropped_popup_3.png" id="modalImg" alt="">
+            <div id="modalText">
+                No, we are not raising ducks for foie gras in here! NEST Paris is an upcoming place where entrepreneurs live together in the love capital of the world, mix ideas and get on top of the knowledge pyramid.
+                <div style="margin-right:4vw">
+                    <br>We’re still intensely brainstorming for our awesome landing page and if you are part of the fancy, lucky people who got early VIP access, welcome! If not, have no fear our final version is coming!</div>
+            </div>
+            <div id="modalForm">
+                <label for="modalInput" id="modalLabel">Authorized personnel only</label>
+                <input type="text" placeholder="Enter password" id="modalInput" />
+                <button type="button" id="modalBtn">Proceed to VIP website</button>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/jquery-1.11.1.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/common.js"></script>
+    <script src="/javascripts/jquery.form.js"></script>
+    <script src="/javascripts/skrollr.min.js"></script>
+    <script src="/javascripts/custom.js"></script>
+    <script src="/javascripts/jquery.blockUI.js"></script>
+    <script src="/javascripts/jquery-uix.js"></script>
+    <script src="/javascripts/angular-toastr.tpls.min.js"></script>
+    <script type="text/javascript">
+    angular.module('nestParis', ['ngAnimate', 'toastr'])
+        .config(function(toastrConfig) {
+            angular.extend(toastrConfig, {
+                autoDismiss: false,
+                containerId: 'toast-container',
+                maxOpened: 0,
+                newestOnTop: true,
+                positionClass: 'toast-bottom-right',
+                preventDuplicates: false,
+                preventOpenDuplicates: false,
+                target: 'body'
+            });
+        })
+        .controller('mainController', ['$scope', '$http', 'toastr', function($scope, $http, toastr) {
+            $scope.liveSend = function() {
+                console.log('live there::', $scope.live);
+                $http.post('/liveForm', $scope.live).then(function(res) {
+                    $scope.live = {};
+                    console.log('liveForm response::::', res);
+                    toastr.success(res.data);
+                }, function(err) {
+                    toastr.error(err.data);
+                    console.log('Error', err);
+                });
+            };
+            $scope.talkSend = function() {
+                console.log('talk:::', $scope.talk);
+                $http.post('/talkForm', $scope.talk).then(function(res) {
+                    toastr.success(res.data);
+                    $scope.talk = {};
+                    console.log('talkForm:::', res);
+                }, function(err) {
+                    toastr.error(err.data);
+                    console.log('Error', err);
+                });
+            };
+        }]);
+    </script>
+
+
+<%})%>
+
+
+</body>
+
+</html>

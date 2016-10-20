@@ -1,0 +1,847 @@
+/*=======================================
+    SECTION STYLING
+==================================================*/
+
+body { 
+    -webkit-font-smoothing: antialiased;
+}
+
+#headerImg { 
+	background: url(../images/paris_skyline.jpg) 50% 0 fixed; 
+	height: auto;  
+	margin: 0 auto; 
+    width: 100vw; 
+    max-width: 100%;
+    position: relative;
+    padding: 225px 0; /*FALLBACK*/
+    padding: 50vh 0;
+    margin-top: -50px; /*WORKAROUND FOR NON-FUNCTIONING CALC() WITH VH/VW*/
+    z-index: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#faqImg { 
+    background: url(../images/paris_bridge.jpg) 50% 0 fixed; 
+    height: auto;  
+    margin: 0 auto; 
+    width: 100vw; 
+    max-width: 100%; 
+    position: relative; 
+    padding: 150px 0;
+    z-index: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#formImg { 
+    background: url(../images/paris_street.jpg) 50% 0 fixed; 
+    height: auto;  
+    margin: 0 auto; 
+    width: 100vw; 
+    max-width: 100%;
+    position: relative; 
+    padding: 150px 0;
+    z-index: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@media (min-width: 1px) {
+    #headerLogo {
+        position: relative;
+        top: -18px;
+        margin-right: 1%;
+        width: 80px;
+    }
+
+    #headerTitle {
+        margin-top: 0;
+        display:block;
+        font-size:2.5em;
+    }
+
+    #headerText {
+        font-size:1em;
+        text-shadow: 0 0 10px #000, 0 0 10px #000, 0 0 10px #000;
+    }
+}
+
+@media (min-width: 768px) {
+    #headerLogo {
+        position: relative;
+        top: -18px;
+        margin-right: 1%;
+        width: inherit;
+    }
+
+    #headerTitle {
+        margin-top: inherit;
+        font-size:4em;
+        display: inline-block;
+    }
+
+    #headerText {
+        font-size:1.6em;
+    }
+}
+
+#headerContent {
+    color:white;
+    font-family: 'Nunito';
+    font-weight: 300;
+    text-shadow: 0 0 10px #000, 0 0 10px #000;
+    margin:0px 20%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15%;
+}
+
+
+@media (min-width: 1px) {
+
+    .imgText {
+        color: white;
+        font-family: 'Open Sans';
+        font-weight: 700;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 30%;
+        line-height: 2;
+        text-shadow: 0 0 10px #000;
+        font-size: 20px;
+    }
+
+    .imgTextLong {
+        top:10%;
+    }
+}
+
+@media (min-width: 640px) {
+
+    .imgText {
+        font-size: 24px;
+    }
+
+    .imgTextLong {
+        top: 30%;
+    }
+}
+
+.sectionHeader {
+    font-family: 'Nunito';
+    font-weight: 300;
+    font-size: 30pt;
+    text-align: center;
+    margin-bottom: 4%;
+    display: inline-block;
+}
+
+.sectionText {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: center;
+    padding:0 5%;
+}
+
+.borderBottom  {
+    border-bottom: 1px solid #C4C4C4;
+    position: relative;
+    width: 33%;
+    padding-bottom: 0.3em;
+    margin: auto;
+ }
+
+ .sectionContent {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 7%;
+ }
+
+ form {
+    text-align: left;
+ }
+
+ #intro, #faq, #form {
+    min-height: 100vh;
+    position: relative;
+    background-color: white;
+ }
+
+/*=======================================
+    ACCORDION STYLING
+==================================================*/
+
+.container-fullWidth {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+/*FAQ PANEL*/
+
+.panel-group .panel {
+    margin-bottom: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding-left: 15%;
+    padding-right: 15%;
+    position: relative;
+}
+
+.panel-last {
+    border-bottom: 1px solid #ddd !important;
+}
+
+.faqQuestion {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 1.5em;
+    text-align: left;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.faqAnswer {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 1em;
+    text-align: left;1
+    margin-bottom: 10px;
+    padding-bottom: 2%;
+    color:#555555;
+}
+
+.accordionAnchor {
+    text-decoration: none!important;
+    color: inherit;
+}
+
+a.accordionAnchor:hover {
+    color:inherit;
+}
+
+.circle {
+    border: 1px solid #b0b0b0;
+    border-radius: 100%;
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: 3vh;
+    left: 5vw;
+    opacity: 0;
+
+    -webkit-transition: all 0.2s ease-in-out; */
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; 
+}
+
+@media (min-width: 992px) {
+    .circle {
+        left:10vw;
+    }
+}
+
+.plus, .minus {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    position: absolute;
+    color: #b0b0b0;
+}
+
+.plus {
+    line-height: 28px !important;
+    font-size: 46px !important;
+    margin-left: 2px;
+}
+
+.minus {
+    line-height: 23px !important;
+    font-size: 46px !important;
+    margin-left: 8px;
+
+}
+
+a:hover div {
+    opacity: 1;
+}
+
+/*=======================================
+    FORM STYLING
+==================================================*/
+
+.redAsterisk {
+    color: red;
+    font-size:1.2em;
+}
+
+.singleLineForm {
+    width: 100%;
+    border-top: 0;
+    border-left: 0;
+    border-right:0;
+    border-bottom: 2px solid #E3E3E3;
+    padding: 10px 15px;
+    display:block;
+
+    -moz-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+    -o-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+    -webkit-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+    transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+}
+
+.formPair {
+    margin: 20px 0;
+    display:block;
+}
+
+.formPair > input:focus {
+    outline: none;
+    color: #8f8f8c;
+    margin-top: 30px;
+}
+
+#appForm, #talkForm {
+    margin-top: 4%;
+}
+
+.myBtn {
+    border-radius: 0;
+    background-color: #9c9c9c;
+    color:white !important;
+    font-size: 1.3em;
+    border: 1px solid #e3e3e3;
+    font-family: 'Nunito';
+    font-weight: 300;
+    text-shadow: 0 0 5px #000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.blueBtnSelected {
+    background-color: #428BCA !important;
+}
+
+@media (min-width: 1px) {
+    .sendAppBtn {
+        position: relative;
+        background-color: #FF6600;
+        margin-left: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .sendAppBtn {
+        position: absolute;
+        bottom: 7%;
+        left: 50%;
+        background-color: #FF6600;
+        font-size: inherit;
+    }
+}
+
+.sendBtn {
+    background-color: #FF6600;
+}
+
+#sendTalk {
+    position: relative;
+    right: 15px;   
+}
+
+.myTextArea {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 2px solid #E3E3E3;
+    resize:none;
+
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+     box-shadow: inset 0 1px 1px rgba(0,0,0,.075); 
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+
+/*=======================================
+    FILE INPUT 
+==================================================*/
+
+
+.selected_file {
+    height: 20px;
+}
+
+.no-padding {
+    padding:0;
+}
+
+.upload_text {
+    font-size:0.8em;
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+
+.btn-file {
+    color: #000;
+    background-color: #fff;
+    border:1px solid #000;
+    border-radius: 0;
+    padding: 4px 24px;
+}
+
+.custom_upload_button .btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom_upload_button .btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    /* font-size: 999px; */
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background: red;
+    cursor: inherit;
+    display: block;
+}
+
+/*=======================================
+    COLOR CODES
+==================================================*/
+
+.color-red {
+    color:red;
+}
+
+.color-blue {
+    color:#327DB1;
+}
+
+
+/*=======================================
+    NAVIGATION STYLES
+==================================================*/
+li > a {
+    font-family: 'Nunito';
+    font-weight: 300;
+}
+
+#socialMedia {
+    float: right;
+    padding-top: 7.5px;
+}
+
+.navIcon {
+    height: 35px;
+    width: 35px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+div a:hover {
+    text-decoration: none;
+}
+
+.navIcon:hover { 
+-webkit-transform: rotate(360deg); 
+-moz-transform: rotate(360deg); 
+-o-transform: rotate(360deg);
+-ms-transform: rotate(360deg); 
+}
+
+.navIcon {
+-webkit-transition: -webkit-transform 0.7s ease-in-out;
+-moz-transition: -moz-transform 0.7s ease-in-out; 
+-o-transition: -o-transition 0.7s ease-in-out; 
+-ms-transition: -ms-transition 0.7s ease-in-out; 
+}
+
+#facebookIcon:hover g {
+    fill:#3C5A98;
+}
+
+#twitterIcon:hover g {
+    fill:#55ACEE;
+}
+
+#linkedinIcon:hover g {
+    fill:#007BB6;
+}
+
+g {
+    -webkit-transition: all 1s ease-in-out;
+-moz-transition: all 1s ease-in-out; 
+-o-transition: all 1s ease-in-out; 
+-ms-transition: all 1s ease-in-out; 
+}
+
+.nav a {
+    color:#333333 !important;
+}
+
+nav {
+	position: absolute;
+	width: 100%;
+    background: #fff;
+    z-index:99;
+    -webkit-transition: box-shadow 0.5s;
+}
+.fixed {
+	position: fixed; 
+	top: 0; 
+	min-height: 50px; 
+	z-index: 99;
+}
+
+.navbar-white {
+    background-color: white;
+    border-color: #000000;
+    padding: 0 12%;
+}
+
+.navbar-toggle{
+    float:left;
+    border-color: gray;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: gray;
+}
+
+.navbar-collapse {
+    padding:0;
+    overflow-x:hidden;
+}
+
+/*=======================================
+    OVERRIDING NAVIGATION COLLAPSE
+==================================================*/
+
+/*.navbar-collapse.collapse {
+display: block!important;
+}
+
+.navbar-nav>li, .navbar-nav {
+float: left !important;
+}
+
+
+.navbar-nav.navbar-right:last-child {
+margin-right: -15px !important;
+}
+
+.navbar-right {
+float: right!important;
+}
+*/
+
+/*=======================================
+    FOOTER STYLES
+==================================================*/
+
+
+#footer {
+    background-color:#333333;
+    color:#fff;
+    padding:20px 50px 20px 50px;
+    text-align:center;
+    font-family: 'Nunito';
+    font-weight: 300;
+}
+
+#footerText {
+    margin:0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+/*=======================================
+    LOGIN MODAL
+==================================================*/
+#loginModal {
+    height: 100%;
+    width: 100%;
+}
+
+
+div.blockMsg {
+    top:50px; /*FALLBACK*/
+    top: 22vh;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    color: #000;
+    margin-left: 4px;
+    display: inline-block;
+}
+
+#modalForm {
+    position: absolute;
+    width: 17vw;
+    right: 3%;
+    top: 40%;
+}
+
+#modalText {
+    position: absolute;
+    text-align: left;
+    width: 41%;
+    left: 3%;
+    top: 30%;
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+
+@media (min-width: 1px) {
+    #modalText {
+        font-size: 0.4em;
+    }
+
+    #modalImg {
+        width: 100%;
+        width: 100vw;
+    }
+
+    div.blockMsg {
+        left: -4px;
+    }
+
+    #modalForm {
+        width: 100px;
+        width: 30vw;
+    }
+
+    #modalLabel, #modalBtn, #modalInput {
+        height: 20px;
+        height: 4vw;
+    }
+
+    #modalLabel {
+        font-size: 0.5em;
+        font-size:1.7vw;
+        line-height: 1.8;
+    }
+
+    #modalBtn {
+        font-size: 0.5em;
+        font-size:1.7vw;
+    }
+
+    #modalInput {
+        font-size: 0.5em;
+        font-size:2vw;
+    }
+}
+
+@media (min-width: 500px) {
+    #modalText {
+        font-size: 0.65em;
+    }
+
+    div.blockMsg {
+        left: 4vw;
+    }
+
+    #modalForm {
+        width: 30vw;
+    }
+
+    #modalLabel, #modalBtn, #modalInput {
+        height: 4vw;
+    }
+
+    #modalLabel {
+        font-size:1.7vw;
+    }
+
+    #modalBtn {
+        font-size:1.7vw;
+    }
+}
+
+@media (min-width: 650px) {
+    #modalText {
+        font-size: 0.7em;
+    }
+}
+
+@media (min-width: 800px) {
+    #modalText {
+        font-size: 0.8em;
+    }
+
+    #modalImg {
+        width: 70vw;
+    }
+
+    div.blockMsg {
+        left: 15vw;
+    }
+
+    #modalForm {
+        width: 25vw;
+    }
+
+    #modalLabel, #modalBtn, #modalInput {
+        height: 3vw;
+    }
+
+    #modalLabel {
+        font-size:1.5vw;
+    }
+
+    #modalBtn {
+        font-size:1.5vw;
+    }
+}
+
+@media (min-width: 1000px) {
+    #modalText {
+        font-size: 0.7em;
+    }
+
+    #modalImg {
+        width: 50vw;
+    }
+
+    div.blockMsg {
+        left: 25vw;
+    }
+
+    #modalForm {
+        width: 17vw;
+    }
+
+    #modalLabel, #modalBtn, #modalInput {
+        height: 2.6vw;
+    }
+
+    #modalLabel {
+        font-size:1.2vw;
+        line-height: 2;
+    }
+
+    #modalBtn {
+        font-size:1.2vw;
+    }
+
+    #modalInput {
+        font-size:1em;
+    }
+}
+
+@media (min-width: 1300px) {
+    #modalText {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 1500px) {
+    #modalText {
+        font-size: 1em;
+    }
+}
+
+#modalLabel {
+    width: 100%;
+    color: white;
+    background-color: #002496;
+    font-weight: 400;
+    font-family: "Nunito";
+    margin-bottom: 6% !important;
+    text-shadow: 0 0 5px #000;
+}
+
+#modalInput {
+    width: 100%;
+    padding-left: 1%;
+    margin-bottom: 6%;
+}
+
+#modalBtn {
+    font-family: "Nunito";
+    background-color: #ED2839;
+    color: white;
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+    border: 0;
+    text-shadow: 0 0 5px #000;
+}
+
+label#modalLabel, #modalForm > div.form-group {
+    margin: 0;
+}
+
+
+.wrongInput {
+    border-color: #E96666;
+    outline: none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(233, 102, 102, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(233, 102, 102, 0.6);
+}
+
+.lockScrollY {
+    position: fixed; 
+    overflow-y:scroll;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+/*cms styles */
+.base_setting
+{
+    text-align:center;
+}
+
+.edit_btn{
+    position: relative;
+    top: -11px;
+    color: orange;
+}
+
+.link_msg
+{
+    display: none;
+}
+/* end cms styles */
